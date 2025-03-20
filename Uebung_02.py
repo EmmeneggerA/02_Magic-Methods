@@ -33,7 +33,7 @@ class Vector3:
         return self.x * other.x + self.y * other.y + self.z * other.z
     
     def cross(self, other):
-        return Vector3(
+        return Vector3
         x = (self.y * other.z) - (self.z * other.y)
         y = (self.z * other.x) - (self.x * other.z)
         z = (self.x * other.y) - (self.y * other.x)
