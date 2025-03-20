@@ -24,7 +24,10 @@ class Vector3:
             raise TypeError("Multiplication not supported between instances of 'Vector3' and '{}'".format(type(other)))
     
     def __rmul__(self, other):
-        return self * other
+        if isinstance(other, (int, float)):
+            return self * other
+        else:
+            return NotImplemented
     
     def dot(self, other):
         return self.x * other.x + self.y * other.y + self.z * other.z
